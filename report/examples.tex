@@ -1,0 +1,96 @@
+\subsection{Point of sail}
+\begin{labeling}{alligator}
+\item [Luffing] (no propulsive force) angle between 0-30\degree
+\item [Running] (drag) angle around 180\degree
+\end{labeling}
+
+\subsection{ARM firmware}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{height = 4\baselineskip}
+	\includegraphics[width=\textwidth]{Figures/bt_gap.png}
+	\caption{GAP topology}
+	\label{bt-gap}
+	\end{subfigure}
+	~
+	\begin{subfigure}[t]{height = 4\baselineskip}
+	\includegraphics[width=\textwidth]{Figures/bt_gatt.png}
+	\caption{ GATT topology}
+	\label{bt-gatt}
+	\end{subfigure}
+	\captionsource{Bluetooth topologies.}{\url{https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt}}\label{bt-tops}
+\end{figure}
+
+\subsubsection{GPS}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Figures/A2235-H.jpg}
+\captionsource{Maestro \emph{A2235-H} \gls{gps} module with built-in antenna.}{Author}
+\label{gps-figure}
+\end{figure}
+
+\begin{lstlisting}
+GPGSA,A,3,03,22,31,23,01,06,09,11,,,,,1.9,1.2,1.5*33
+GPRMC,152053.000,A,6537.0389,N,02208.0160,E,0.17,264.54,240917,,,A*6A
+GPGGA,152054.000,6537.0389,N,02208.0160,E,1,08,1.2,14.0,M,25.0,M,,0000*68
+\end{lstlisting}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | l }
+ 	Command 		& Serial output \\
+  	\hline
+  	\texttt{imu} 		& Orientation in euler angles \\
+  	\texttt{gpsraw} 	& Raw \gls{nmea} \gls{gps} coding\\
+\end{tabular}
+\caption{Serial connection commands and outputs.}
+\label{table:serial}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | l | l | l }
+  Device 	& Sample rate & BT output rate 	& USB output rate\\\hline
+  IMU 		& 100 		& 30 			& 60\\
+\end{tabular}
+\caption{System input/output rates in $~\textrm{Hz}$. BT is short for Bluetooth and refers to the rates at which GATT transactions are pushed to the Android app. \gls{usb} refers to the rate at which serial \gls{uart} values are output to the terminal.}
+\label{table:systemrates}
+\end{table}
+
+\begin{enumerate}[noitemsep]
+\item Draw schematic:
+	\begin{enumerate}[noitemsep]
+		\item Annotate schematic and run \gls{erc} to identify simple electronic violations.
+	\end{enumerate}
+\item Create net-list:
+	\begin{enumerate}[noitemsep]
+		\item Generate net-list.
+	\end{enumerate}
+\item Generate manufacturing (gerber/drill) files.
+\end{enumerate}
+
+\begin{itemize}[noitemsep]
+\item{\makebox[3cm][l]{STM32F411RET} - Microcontoller unit}
+\item Sensors ($I^2C$):
+	\begin{itemize}[noitemsep]
+	\item{\makebox[3cm][l]{LSM303AGR} - Accelereometer \& Magnetometer}
+	\end{itemize}
+\item Sensors, connectors only ($I^2C$):
+	\begin{itemize}[noitemsep]
+	\item Battery level
+	\end{itemize}
+\end{itemize}
+
+\begin{align}
+&\textrm{Predict state estimate:} \qquad \hat{x}_{k|k-1}=F_k\hat{x}_{k|k-1}+Gv_{k-1}\\
+&\textrm{Predict covariance matrix:}\qquad P_{k|k-1}=F_{k}P_{k-1|k-1}F^T_{k}+Q_{k}\\
+\label{eq.measurement}
+&\textrm{measurement residual}\qquad \tilde{y}_k=z_k-H_k\hat{x}_{k|k-1}\\
+&\textrm{Innovation covariance}\qquad S_k=H_kP_{k|k-1}H_k^T+R_k \\
+&\textrm{Optimal Kalman gain}\qquad K_k=P_{k|k-1}H_k^TS_k^{-1}\\
+\label{eq.Update}
+&\textrm{Update state estimate}\qquad \hat{x}_{k|k}=\hat{x}_{k|k-1}+K_k\tilde{y}_k\\
+&\textrm{Update covariance estimate}\qquad P_{k|k}=(I-K_kH_k)P_{k|k-1}\\
+&\textrm{Measurement post-fit residual} \qquad \tilde{y}_{k|k}=z_k-H_k\hat{x}_{k|k}
+\end{align}
