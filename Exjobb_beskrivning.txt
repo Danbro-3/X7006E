@@ -1,0 +1,21 @@
+Title: Evaluation of simulation models for nanosecond pulse coding system.
+Execution date: 2018-12-03 to 2018-03-22 (vecka 49 - 12)
+
+/Summary{This MSc project involves the simulation and evaluation of a high peak-power electrical system design optimized to operate in approximately 1GHz and above frequencies.
+}
+
+/Background{
+/leaveout{ Pulse coding is used in several wireless communication devices and sensors, including Radar, Lidar, GPS, etc. ~~More background
+}Allegedly information on where the system can be useful?
+
+When designing electrical circuits the electromagnetic properties of the circuit board plays a role in parasitic behavior that lowers the efficiency of the system; these properties are magnified proportionally to the frequency and power of a system.
+
+For systems reliant on precision, high frequency high peak-power will trigger a severe enough electromagnetic effect to play a large role in both parasitic properties lowering the efficiency of the system and signal distortion.
+}
+
+/Task{To find the source of the parasitic- and unexpected behavior, different methods to simulate the electromagnetic properties of the circuitry will be explored and should be validated by comparison against physical measurements. This will allow some insight in what losses are caused by the magnetics, where they  originate from and what could be done to prevent them.
+} repeat information?
+
+
+/havethisearlier{The circuit board has been previously designed by the student and is the 2'nd working version, built for testability and carefully designed to minimize all signal distortion due to known possible sources. This project will act as a base for the next production version by providing vital information on the design flaws and provide a base for further improvement.
+} Repeat information? Should this be part of the pre-study?

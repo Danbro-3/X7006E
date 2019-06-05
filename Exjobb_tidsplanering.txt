@@ -1,0 +1,22 @@
+Title: Evaluation of simulation models for nanosecond pulse coding system.
+Execution date: 2018-12-03 to 2018-03-22 (vecka 49 - 12)
+
+date | week | task
+
+03/12 | 49 | Prestudies, litterature study, reading, etc
+-06/1 |
+
+07/1  |  2 | Building simulation profiles using the different
+-3/2  |		 methods found in the pre-study.
+
+4/2   |  6 | Collecting simulation data
+-10/2 |  
+
+18/2  |  8 | Testing physical system and collect data
+-3/3  |
+
+4/3   | 10 | Compare results and draw conclusions on the data
+-17/3 |
+
+18/3  | 12 | Finish report and prepare presentation
+-24/3

@@ -1,0 +1,16 @@
+Title: Evaluation of simulation models for high peak effect, high frequency circuit board
+Execution date: 2018-26-11 to 2018-04-14 (week 48 - 15)
+
+This MSc project involves the simulation and evaluation of a high peak-power electrical system, previously designed by the student to operate in frequencies approximating 1 GHz.
+
+When designing electrical circuits the electromagnetic properties of the circuit board plays a role in parasitic behavior and interference that lowers the efficiency of the system; these properties are magnified proportionally to the frequency and power of a system.
+
+For systems reliant on precision, high frequency high peak-power will trigger a severe enough electromagnetic effect to play a large role in both parasitic properties lowering the efficiency of the system and signal distortion.
+
+The circuit board has been previously designed by the student and is the 2'nd version in production, giving some initial knowledge to the system. The first version worked as a proof of concept and suffered by severe parasitic inductance. While normally some parasitic inductance is not that big of an issue the system has a peak power of approximately 2.5 kW for the duration of approximately 1 ns; the short pulses of energy never lets the system converge but it is difficult to find the origin of these disturbances.
+
+The second system is designed to be easily testable and optimize everything known to possibly be a source of error. This system has yet to be assembled and tested, but measurement data will act as a benchmark to evaluate the different simulations of the system.
+
+To find the source of the parasitic- and unexpected behavior, different methods to simulate the electromagnetic properties of the circuitry will be explored in the pre-study and should be validated by comparison against physical measurements. This will allow some insight in what losses are caused by the magnetics, where they originate from and what could be done to prevent them.
+
+The results of this thesis will act as a foundation for the third version of the circuitry where the most accurate method can be used to simulate the future versions ahead of production saving a great deal of time and money.

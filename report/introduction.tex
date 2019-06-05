@@ -1,13 +1,24 @@
-Introduces the problem
+\hl{
+When designing electrical circuits the electromagnetic properties of the circuit board plays a role in parasitic behavior and interference that lowers the efficiency of the system; these properties are magnified proportionally to the frequency and power. While normally some parasitics are not that big of an issue, a system reliant on precision will lose effectiveness quickly when facing a surge of energy.
+
+These parasitics are difficult to isolate, but it is believed simulations of the circuit layout could determine the source and possible courses of counter measures.
+}
 
 \subsection{Goals}
-What is the goals of this examination job?
+\hl{
+To find the source of the parasitic- and unexpected behavior, different methods to simulate the electromagnetic properties of the circuitry will be explored in the pre-study and should be validated by comparison against physical measurements. This will allow some insight in what losses are caused by the parasitics, where they originate from and what could be done to prevent them.
+}
 
-\subsubsection{Reason}
-Why I chose this project?
+\subsubsection{Reason}\hl{
+Similar circuits has been previously designed by the student, and the circuit design presented in this thesis is loosely based on the second version in production, giving some initial knowledge to the system. The first version worked as a proof of concept and suffered severe parasitic inductance. In the system version which prompted this thesis work repeated surges of approximately $2.5~\textrm{kW}$ for the duration of $1~\textrm{ns}$ are induced. The system simulated and analyzed in this thesis work is based loosely on this system, but different designs, different components and only a single channel. More about the system can be found in }\autoref{sec:sys}. 
 
-\subsubsection{Usecase}
-What can this be used for and what motivates the support from \company ?
 
-\subsection{Hypothesis}
-Whats my hypothesis, what am I expecting?
+\subsubsection{Usecase}\hl{
+By measuring the circuitry it is simple to locate errors and disturbances, but locating disturbances is not identical to locating the source. The results of this thesis could act directly as a foundation for the third version, or simply as another area of expertise to customers, where the most accurate method can be used to simulate future systems ahead of production, saving a great deal of time and money.
+}
+
+\subsection{Hypothesis}\hl{
+The parasitics are difficult to isolate, but hypothetically simulating full systems could pinpoint these and be used as reference designs to create ideal circuits ahead of time. Even if a source can not be found directly, a faulty circuit could be identified.
+
+For this thesis to be successful a circuit needs to be successfully simulated with parasitics in concordance with a physically measured system. If this can be performed reliably and without to much effort, a system can be analyzed ahead of production saving time and money.
+}

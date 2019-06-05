@@ -1,0 +1,29 @@
+Title: Evaluation of simulation models for high peak effect, high frequency circuit board
+Execution date: 2018-26-11 to 2018-04-14 (week 48 - 15)
+
+date | week | task
+26/11 | 48 | Prestudies, litterature study, reading, designing system, 
+-23/12|		 , securing a copy of a simultion program
+
+24/12 | 52 | Assemble physical system
+-06/1 |		  
+
+07/1  |  2 | Testing physical system and collect data
+-20/1 |		 
+
+21/1  |  4 | Building simulation profiles using the different
+-17/2 |		 methods found in the pre-study.
+
+18/2  |  8 | Collecting simulation data
+-3/3  |  
+
+4/3   | 10 | -A week for things that will undoubtedly go wrong- 
+-10/3 |
+
+11/3  | 11 | Compare results and draw conclusions on the data
+-24/3 |
+
+25/3  | 13 | Finish report and prepare presentation
+-7/4
+
+	|14/15 | presentation
