@@ -1,0 +1,44 @@
+!----------------------------------------------------------------------------
+! Output  : Program "PEEC_3D", Version 2018.2.3 (64-bit) (05.12.2018)
+! (C) EMCoS 2001-2018
+! Date    : 2019-07-02  10:16:51
+! Data    : PEEC_3D General Output File
+!----------------------------------------------------------------------------
+
+ 
+ Started  at:  2019-07-02  10:16:51
+ 
+
+                              GEOMETRY
+
+Imported Geometry:                  Simulation_test_1.nas
+Number of Triangles total           = 52686
+Number of Metallic Triangles        = 52686
+Number of Dielectric Triangles      = 0
+
+  --------------------------------------------------------------------------------
+
+                          PEEC MODEL DATA
+
+Model Construction                  = Automatic
+Number of Branches                  = 174
+Number of Pins                      = 123
+Number of Ports                     = 0
+Number of L elements                = 174
+Number of C elements                = 123
+Circuit Type                        = Pi
+Circuit Solver                      = TSReady
+
+Reference for CG calculation  = Infinity
+
+Start Stage                  = Calculate_RLCG
+Stop  Stage                  = Generate PEEC
+  --------------------------------------------------------------------------------
+
+                    DIELECTRIC MEDIA PROPERTIES DATA
+
+  No.   Permittivity   Permittivity   Permeability  Permeability   conductivity   
+           real           imag           real          imag          in S/m         
+   0   1.000000E+00   0.000000E+00   1.000000E+00   0.000000E+00   0.000000E+00
+
+  --------------------------------------------------------------------------------

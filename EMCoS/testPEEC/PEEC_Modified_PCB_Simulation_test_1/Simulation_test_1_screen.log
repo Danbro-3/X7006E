@@ -1,0 +1,41 @@
+PEEC Calculation 02.07.19 10:16 (Modified_PCB, Simulation_test_1) 
+*******************************************************
+
+PEEC_3D: Three-dimensional PEEC Solver
+Version 2018.2.3 (64-bit) (05.12.2018)
+(C) EMCoS 2001-2018
+
+Read geometry file: Simulation_test_1.nas...
+
+Check coincident elements...
+Check triangles intersections...
+Check pins locations...
+Check coincident pins...
+WARNING: Impedance loads will be replaced by PEC for CG calculation!
+WARNING: Circuit calculation can not be performed if stop stage is less than 5!
+Preparation Automatic PEEC Model ...
+Branch generation ...
+Number of C Elements =      123
+Number of L Elements =      174
+
+------  Start RL Calculation ------
+
+LFMF: Low Frequency Magnetic Field solver
+Version 2018.2.0 (64-bit) (29.11.2018)
+
+(C) EMCoS 1999-2018
+
+Geometry pre-processing...
+
+
+Frequency:              9.00000E+08 Hz   (    1 from   11)
+
+Calculate Material Parameters...
+Solution of the Solenoidal Currents
+Matrix size:                  24166
+Matrix Solver:               AGGR      (  AMSOUT  )
+Memory required:           8911.434 MB
+RAM used:                  4536.830 MB
+RAM available:             5847.016 MB
+Fill Matrix ....                   (true out-of-core)
+Calculation has been terminated by user request.

@@ -1,0 +1,23 @@
+!----------------------------------------------------------------------------
+!              Output: Program "LFMF", Version 2018.2.0 (64-bit) (29.11.2018)
+!----------------------------------------------------------------------------
+ 
+ Licensed for    1 CPU.    4 thread(s) used
+ 
+
+
+                         Body Parameter List
+
+          Number of Vertices                          =    28684
+          Number of Edges                             =    81402
+          Number of Faces                             =    52686
+          Number of Boundary Edges                    =     5980
+          Number of Interior Edges                    =    75422
+          Number of Metallic Triangles                =    52686
+          Number of Dielectric Triangles              =        0
+          Number of Interior Edges           (Unkn.)  =    76656
+          Number of Loops (Total)            (Unkn.)  =    24166
+          Number of Global Loops             (Unkn.)  =     2564
+          Number of Port Loops               (Unkn.)  =      174
+          Number of Stars                    (Unkn.)  =        0
+

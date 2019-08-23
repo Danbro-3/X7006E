@@ -1,0 +1,939 @@
+
+**** 02/16/17 09:12:11 ******* PSpice 16.2.0 (Oct 2008) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TR"  [ C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020-ps
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TR.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lmg1020.lib" 
+.LIB "../../../epc2019.lib" 
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100us 0 
+.OPTIONS STEPGMIN
+.OPTIONS PREORDER
+.OPTIONS ABSTOL= 10.0p
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 400
+.OPTIONS VNTOL= 10.0u
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE V(alias(*)) I(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LMG1020
+C_C11         0 VDD  1u  
+X_U3         N16649708 N16649704 D_D1
+R_R19         N16649704 N16649708  4.02  
+X_U5         VDD 0 N16649618 N16649734 N16649476 0 LMG1020
+R_R20         N16649704 N16649708  4.02  
+V_V15         VDD 0 5
+V_V2         N16649618 0  
++PULSE 5 0 2u 1n 1n 0.499u 1u
+V_V16         N16649704 0 20
+R_R17         N16649704 N16649708  4.02  
+R_R18         N16649704 N16649708  4.02  
+C_C12         0 N16649708  4700p  
+R_Routl         N16649476 OUT  1m  
+X_U4         OUT N16649708 0 EPC2019 
+R_R21         N16649708 0  1k  
+R_Routh         N16649734 OUT  1m  
+
+**** RESUMING TR.cir ****
+.END
+
+Unable to find index file lmg1020.ind for library file lmg1020.lib
+Making new index file lmg1020.ind for library file lmg1020.lib
+Index has 52 entries from 1 file(s).
+
+
+Unable to find index file epc2019.ind for library file epc2019.lib
+Making new index file epc2019.ind for library file epc2019.lib
+Index has 1 entries from 1 file(s).
+
+**** 02/16/17 09:12:11 ******* PSpice 16.2.0 (Oct 2008) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TR"  [ C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020-ps
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               PMOS01          NMOS01          
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO   -2               2            
+          KP    1.11            1.55         
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    1.000000E-03    1.000000E-03 
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-528.2E+03  (  VDD)    3.9685  (N16649476)-528.2E+03                     
+
+(N16649618)    3.9685                 (N16649704)   15.8740                     
+
+(N16649708) 28.60E+03                 (N16649734)-527.8E+03                     
+
+(X_U4.gate)-690.1E+03                 (X_U4.bl_gd) 29.33E+03                    
+
+(X_U4.bl_gs) 1700.7000                (X_U4.bl_sd) 29.33E+03                    
+
+(X_U4.br_gd) 29.33E+03                (X_U4.br_gs) 1700.7000                    
+
+(X_U4.br_sd) 29.33E+03                (X_U4.drain) 29.33E+03                    
+
+(X_U4.tl_gd) 29.33E+03                (X_U4.tl_gs) 1700.7000                    
+
+(X_U4.tl_sd) 29.33E+03                (X_U4.tr_gd) 29.33E+03                    
+
+(X_U4.tr_gs) 1700.7000                (X_U4.tr_sd) 29.33E+03                    
+
+(X_U4.source) 1700.7000               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)     .7937           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)     .7937           (X_U5.Top_N02966)     .7937               
+
+(X_U5.Top_N03064)     .7937           (X_U5.Top_N03999)     .5000               
+
+(X_U5.X_Top_U13.1)     .7937          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)-528.2E+03         (X_U5.Top_Core_VGP)-527.8E+03             
+
+(X_U5.Top_N16652210)    1.7461        (X_U5.Top_N16652216)     .7143            
+
+(X_U5.Top_N16652601)    1.7461        (X_U5.Top_N16652637)     .7143            
+
+(X_U5.X_Top_U13.INM1)   -1.7639       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)     .5670       (X_U5.X_Top_U14.INM1)    1.3859           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)     .7937       (X_U5.X_Top_U19.YINT)     .7937           
+
+(X_U5.X_Top_U20.YINT)     .7937       (X_U5.Top_Core_N00764)-527.8E+03          
+
+(X_U5.Top_Core_N00816)-8092.5000      (X_U5.Top_Core_N00838)     .6300          
+
+(X_U5.Top_Core_N00962)-10.56E-09      (X_U5.Top_Core_N01082)-528.2E+03          
+
+(X_U5.Top_Core_VIN_INT)     .5000     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    0.0000    (X_U5.Top_UVLO_N16641955)     .0675       
+
+(X_U5.Top_UVLO_N16641969)    3.1073   (X_U5.X_Top_Core_U12.Ypp)     .7937       
+
+(X_U5.X_Top_Core_U12.OUTf)     .6300  (X_U5.X_Top_Core_U12.OUTp) 2.291E-09      
+
+(X_U5.X_Top_Core_U12.OUTr)     .7937  (X_U5.X_Top_Core_U12.VSUP)     .7937      
+
+(X_U5.X_Top_UVLO_U13.INM1)     .6835  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)     .6300
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)     .6300               
+
+
+  These voltages failed to converge:
+
+    V(N16649708)              =     15.86V  \    28.60KV
+    V(N16649476)              =     3.895V  \  -528.20KV
+    V(OUT)                    =     3.901V  \  -528.20KV
+    V(N16649734)              =     3.907V  \  -527.79KV
+    V(X_U5.Top_Core_VGP)      =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_N00764)   =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_VIN_INT)  =   629.96mV  \   500.00mV
+    V(X_U5.Top_Core_N01082)   =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_VGN)      =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_N00816)   =     3.845V  \   -8.092KV
+    V(X_U5.Top_Core_N00962)   =   123.16mV  \   -10.56nV
+    V(X_U5.Top_Core_N00838)   =   793.70mV  \   629.96mV
+    V(X_U5.Top_N03999)        =   957.44mV  \   500.00mV
+    V(X_U5.Top_N02966)        =     1.000V  \   793.70mV
+    V(X_U5.Top_N03064)        =     1.000V  \   793.70mV
+    V(X_U4.drain)             =     15.86V  \    29.33KV
+    V(X_U4.source)            =   -2.321pV  \    1.701KV
+    V(X_U4.gate)              =     3.901V  \  -690.13KV
+    V(X_U4.tl_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.bl_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.br_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.tr_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.tl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.br_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.br_sd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_sd)             =     15.86V  \    29.33KV
+    V(X_U5.X_Top_U13.INP2)    =   714.33mV  \   566.97mV
+    V(X_U5.X_Top_U13.1)       =     1.000V  \   793.70mV
+    V(X_U5.Top_N02948)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.Ypp) =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.OUTf) =   793.70mV  \   629.96mV
+    V(X_U5.X_Top_U18.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.Top_N02960)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U20.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U19.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.XNSW1.test) =     1.000V  \   629.96mV
+    V(X_U5.X_Top_Core_U12.XPSW1.test) =  -206.30mV  \         0V
+    V(X_U5.X_Top_Core_U12.XPSW2.test) =   793.70mV  \   629.96mV
+
+  These supply currents failed to converge:
+
+    I(X_U5.E_Top_Core_E3)     =         0A  \    59.61nA
+    I(X_U5.E_Top_Core_E4)     =         0A  \   -59.61nA
+    I(V_V15)                  =    -6.158A  \  -404.82KA
+    I(V_V16)                  =   -15.86mA  \    28.44KA
+
+  These devices failed to converge:
+    X_U3.D1   X_U5.E_Top_ABM1 X_U4.gswitch X_U4.ggsdiode X_U5.M_Top_Core_M4 
+    X_U5.M_Top_Core_M3 
+Resuming Simulation with the following settings
+ITL2 = 585
+ABSTOL = 5.62e-010
+
+Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)  963.8500  (  VDD)    3.9685  (N16649476)  963.8500                     
+
+(N16649618)    3.9685                 (N16649704)   15.8740                     
+
+(N16649708)   15.8580                 (N16649734)  963.8500                     
+
+(X_U4.gate)  963.8500                 (X_U4.bl_gd)   15.8580                    
+
+(X_U4.bl_gs) 699.5E-09                (X_U4.bl_sd)   15.8580                    
+
+(X_U4.br_gd)   15.8580                (X_U4.br_gs) 699.5E-09                    
+
+(X_U4.br_sd)   15.8580                (X_U4.drain)   15.8580                    
+
+(X_U4.tl_gd)   15.8580                (X_U4.tl_gs) 852.9E-09                    
+
+(X_U4.tl_sd)   15.8580                (X_U4.tr_gd)   15.8580                    
+
+(X_U4.tr_gs) 852.9E-09                (X_U4.tr_sd)   15.8580                    
+
+(X_U4.source) 699.5E-09               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)     .7937           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)     .7937           (X_U5.Top_N02966)     .7937               
+
+(X_U5.Top_N03064)     .7937           (X_U5.Top_N03999)     .5000               
+
+(X_U5.X_Top_U13.1)     .7937          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)  967.8200         (X_U5.Top_Core_VGP)  967.8200             
+
+(X_U5.Top_N16652210)    1.7461        (X_U5.Top_N16652216)     .7143            
+
+(X_U5.Top_N16652601)    1.7461        (X_U5.Top_N16652637)     .7143            
+
+(X_U5.X_Top_U13.INM1)   -1.7639       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)     .5670       (X_U5.X_Top_U14.INM1)    1.3859           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)     .7937       (X_U5.X_Top_U19.YINT)     .7937           
+
+(X_U5.X_Top_U20.YINT)     .7937       (X_U5.Top_Core_N00764)  967.8200          
+
+(X_U5.Top_Core_N00816)    3.9661      (X_U5.Top_Core_N00838)     .6300          
+
+(X_U5.Top_Core_N00962)     .0024      (X_U5.Top_Core_N01082)  967.8200          
+
+(X_U5.Top_Core_VIN_INT)     .5000     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    0.0000    (X_U5.Top_UVLO_N16641955)     .0675       
+
+(X_U5.Top_UVLO_N16641969)    3.1073   (X_U5.X_Top_Core_U12.Ypp)     .7937       
+
+(X_U5.X_Top_Core_U12.OUTf)     .6300  (X_U5.X_Top_Core_U12.OUTp) 2.291E-09      
+
+(X_U5.X_Top_Core_U12.OUTr)     .7937  (X_U5.X_Top_Core_U12.VSUP)     .7937      
+
+(X_U5.X_Top_UVLO_U13.INM1)     .6835  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)     .6300
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)     .6300               
+
+
+  These voltages failed to converge:
+
+    V(N16649708)              =    29.81KV  \     15.86V
+    V(N16649476)              =  -665.49KV  \    963.85V
+    V(OUT)                    =  -665.49KV  \    963.85V
+    V(N16649734)              =  -664.98KV  \    963.85V
+    V(X_U5.Top_Core_VGP)      =  -664.97KV  \    967.82V
+    V(X_U5.Top_Core_N00764)   =  -664.97KV  \    967.82V
+    V(X_U5.Top_Core_VIN_INT)  =   629.96mV  \   500.00mV
+    V(X_U5.Top_Core_N01082)   =  -665.48KV  \    967.82V
+    V(X_U5.Top_Core_VGN)      =  -665.48KV  \    967.82V
+    V(X_U5.Top_Core_N00816)   =   -10.20KV  \     3.966V
+    V(X_U5.Top_Core_N00962)   =   -13.31nV  \    2.409mV
+    V(X_U5.Top_Core_N00838)   =   793.70mV  \   629.96mV
+    V(X_U5.Top_N03999)        =   957.44mV  \   500.00mV
+    V(X_U5.Top_N02966)        =     1.000V  \   793.70mV
+    V(X_U5.Top_N03064)        =     1.000V  \   793.70mV
+    V(X_U4.drain)             =    30.57KV  \     15.86V
+    V(X_U4.source)            =    2.171KV  \   699.54nV
+    V(X_U4.gate)              =  -869.50KV  \    963.85V
+    V(X_U4.tl_gs)             =    2.171KV  \   852.86nV
+    V(X_U4.bl_gs)             =    2.171KV  \   699.54nV
+    V(X_U4.br_gs)             =    2.171KV  \   699.54nV
+    V(X_U4.tr_gs)             =    2.171KV  \   852.86nV
+    V(X_U4.tl_gd)             =    30.57KV  \     15.86V
+    V(X_U4.bl_gd)             =    30.57KV  \     15.86V
+    V(X_U4.br_gd)             =    30.57KV  \     15.86V
+    V(X_U4.tr_gd)             =    30.57KV  \     15.86V
+    V(X_U4.tl_sd)             =    30.57KV  \     15.86V
+    V(X_U4.bl_sd)             =    30.57KV  \     15.86V
+    V(X_U4.br_sd)             =    30.57KV  \     15.86V
+    V(X_U4.tr_sd)             =    30.57KV  \     15.86V
+    V(X_U5.X_Top_U13.INP2)    =   714.33mV  \   566.97mV
+    V(X_U5.X_Top_U13.1)       =     1.000V  \   793.70mV
+    V(X_U5.Top_N02948)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.Ypp) =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.OUTf) =   793.70mV  \   629.96mV
+    V(X_U5.X_Top_U18.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.Top_N02960)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U20.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U19.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.XNSW1.test) =     1.000V  \   629.96mV
+    V(X_U5.X_Top_Core_U12.XPSW1.test) =  -206.30mV  \         0V
+    V(X_U5.X_Top_Core_U12.XPSW2.test) =   793.70mV  \   629.96mV
+
+  These supply currents failed to converge:
+
+    I(V_V15)                  =  -510.04KA  \  -120.46mA
+    I(V_V16)                  =    29.65KA  \   -15.99mA
+
+  These devices failed to converge:
+    X_U3.D1   X_U5.E_Top_ABM1 X_U4.E_IGD X_U4.gswitch X_U4.ggsdiode 
+    X_U4.ggddiode X_U5.M_Top_Core_M4 X_U5.M_Top_Core_M3 
+Resuming Simulation with the following settings
+ITL2 = 856
+RELTOL = 0.0086
+ABSTOL = 3.16e-008
+
+Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-528.2E+03  (  VDD)    3.9685  (N16649476)-528.2E+03                     
+
+(N16649618)    3.9685                 (N16649704)   15.8740                     
+
+(N16649708) 28.60E+03                 (N16649734)-527.8E+03                     
+
+(X_U4.gate)-690.1E+03                 (X_U4.bl_gd) 29.33E+03                    
+
+(X_U4.bl_gs) 1700.7000                (X_U4.bl_sd) 29.33E+03                    
+
+(X_U4.br_gd) 29.33E+03                (X_U4.br_gs) 1700.7000                    
+
+(X_U4.br_sd) 29.33E+03                (X_U4.drain) 29.33E+03                    
+
+(X_U4.tl_gd) 29.33E+03                (X_U4.tl_gs) 1700.7000                    
+
+(X_U4.tl_sd) 29.33E+03                (X_U4.tr_gd) 29.33E+03                    
+
+(X_U4.tr_gs) 1700.7000                (X_U4.tr_sd) 29.33E+03                    
+
+(X_U4.source) 1700.7000               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)     .7937           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)     .7937           (X_U5.Top_N02966)     .7937               
+
+(X_U5.Top_N03064)     .7937           (X_U5.Top_N03999)     .5000               
+
+(X_U5.X_Top_U13.1)     .7937          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)-528.2E+03         (X_U5.Top_Core_VGP)-527.8E+03             
+
+(X_U5.Top_N16652210)    1.7461        (X_U5.Top_N16652216)     .7143            
+
+(X_U5.Top_N16652601)    1.7461        (X_U5.Top_N16652637)     .7143            
+
+(X_U5.X_Top_U13.INM1)   -1.7639       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)     .5670       (X_U5.X_Top_U14.INM1)    1.3859           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)     .7937       (X_U5.X_Top_U19.YINT)     .7937           
+
+(X_U5.X_Top_U20.YINT)     .7937       (X_U5.Top_Core_N00764)-527.8E+03          
+
+(X_U5.Top_Core_N00816)-8092.5000      (X_U5.Top_Core_N00838)     .6300          
+
+(X_U5.Top_Core_N00962)-10.56E-09      (X_U5.Top_Core_N01082)-528.2E+03          
+
+(X_U5.Top_Core_VIN_INT)     .5000     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    0.0000    (X_U5.Top_UVLO_N16641955)     .0675       
+
+(X_U5.Top_UVLO_N16641969)    3.1073   (X_U5.X_Top_Core_U12.Ypp)     .7937       
+
+(X_U5.X_Top_Core_U12.OUTf)     .6300  (X_U5.X_Top_Core_U12.OUTp) 2.291E-09      
+
+(X_U5.X_Top_Core_U12.OUTr)     .7937  (X_U5.X_Top_Core_U12.VSUP)     .7937      
+
+(X_U5.X_Top_UVLO_U13.INM1)     .6835  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)     .6300
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)     .6300               
+
+
+  These voltages failed to converge:
+
+    V(N16649708)              =     15.86V  \    28.60KV
+    V(N16649476)              =     3.895V  \  -528.20KV
+    V(OUT)                    =     3.901V  \  -528.20KV
+    V(N16649734)              =     3.907V  \  -527.79KV
+    V(X_U5.Top_Core_VGP)      =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_N00764)   =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_VIN_INT)  =   629.96mV  \   500.00mV
+    V(X_U5.Top_Core_N01082)   =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_VGN)      =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_N00816)   =     3.845V  \   -8.092KV
+    V(X_U5.Top_Core_N00962)   =   123.16mV  \   -10.56nV
+    V(X_U5.Top_Core_N00838)   =   793.70mV  \   629.96mV
+    V(X_U5.Top_N03999)        =   957.44mV  \   500.00mV
+    V(X_U5.Top_N02966)        =     1.000V  \   793.70mV
+    V(X_U5.Top_N03064)        =     1.000V  \   793.70mV
+    V(X_U4.drain)             =     15.86V  \    29.33KV
+    V(X_U4.source)            =   -2.321pV  \    1.701KV
+    V(X_U4.gate)              =     3.901V  \  -690.13KV
+    V(X_U4.tl_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.bl_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.br_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.tr_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.tl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.br_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.br_sd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_sd)             =     15.86V  \    29.33KV
+    V(X_U5.X_Top_U13.INP2)    =   714.33mV  \   566.97mV
+    V(X_U5.X_Top_U13.1)       =     1.000V  \   793.70mV
+    V(X_U5.Top_N02948)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.Ypp) =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.OUTf) =   793.70mV  \   629.96mV
+    V(X_U5.X_Top_U18.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.Top_N02960)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U20.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U19.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.XNSW1.test) =     1.000V  \   629.96mV
+    V(X_U5.X_Top_Core_U12.XPSW1.test) =  -206.30mV  \         0V
+    V(X_U5.X_Top_Core_U12.XPSW2.test) =   793.70mV  \   629.96mV
+
+  These supply currents failed to converge:
+
+    I(X_U5.E_Top_Core_E3)     =  -454.75fA  \  -119.21nA
+    I(V_V15)                  =    -6.158A  \  -404.82KA
+    I(V_V16)                  =   -15.86mA  \    28.44KA
+
+  These devices failed to converge:
+    X_U3.D1   X_U5.E_Top_ABM1 X_U4.gswitch X_U4.ggsdiode X_U5.M_Top_Core_M4 
+    X_U5.M_Top_Core_M3 
+Resuming Simulation with the following settings
+ITL2 = 1000
+ABSTOL = 1e-006
+
+Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-528.2E+03  (  VDD)    3.9685  (N16649476)-528.2E+03                     
+
+(N16649618)    3.9685                 (N16649704)   15.8740                     
+
+(N16649708) 28.60E+03                 (N16649734)-527.8E+03                     
+
+(X_U4.gate)-690.1E+03                 (X_U4.bl_gd) 29.33E+03                    
+
+(X_U4.bl_gs) 1700.7000                (X_U4.bl_sd) 29.33E+03                    
+
+(X_U4.br_gd) 29.33E+03                (X_U4.br_gs) 1700.7000                    
+
+(X_U4.br_sd) 29.33E+03                (X_U4.drain) 29.33E+03                    
+
+(X_U4.tl_gd) 29.33E+03                (X_U4.tl_gs) 1700.7000                    
+
+(X_U4.tl_sd) 29.33E+03                (X_U4.tr_gd) 29.33E+03                    
+
+(X_U4.tr_gs) 1700.7000                (X_U4.tr_sd) 29.33E+03                    
+
+(X_U4.source) 1700.7000               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)     .7937           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)     .7937           (X_U5.Top_N02966)     .7937               
+
+(X_U5.Top_N03064)     .7937           (X_U5.Top_N03999)     .5000               
+
+(X_U5.X_Top_U13.1)     .7937          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)-528.2E+03         (X_U5.Top_Core_VGP)-527.8E+03             
+
+(X_U5.Top_N16652210)    1.7461        (X_U5.Top_N16652216)     .7143            
+
+(X_U5.Top_N16652601)    1.7461        (X_U5.Top_N16652637)     .7143            
+
+(X_U5.X_Top_U13.INM1)   -1.7639       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)     .5670       (X_U5.X_Top_U14.INM1)    1.3859           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)     .7937       (X_U5.X_Top_U19.YINT)     .7937           
+
+(X_U5.X_Top_U20.YINT)     .7937       (X_U5.Top_Core_N00764)-527.8E+03          
+
+(X_U5.Top_Core_N00816)-8092.5000      (X_U5.Top_Core_N00838)     .6300          
+
+(X_U5.Top_Core_N00962)-10.56E-09      (X_U5.Top_Core_N01082)-528.2E+03          
+
+(X_U5.Top_Core_VIN_INT)     .5000     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    0.0000    (X_U5.Top_UVLO_N16641955)     .0675       
+
+(X_U5.Top_UVLO_N16641969)    3.1073   (X_U5.X_Top_Core_U12.Ypp)     .7937       
+
+(X_U5.X_Top_Core_U12.OUTf)     .6300  (X_U5.X_Top_Core_U12.OUTp) 2.291E-09      
+
+(X_U5.X_Top_Core_U12.OUTr)     .7937  (X_U5.X_Top_Core_U12.VSUP)     .7937      
+
+(X_U5.X_Top_UVLO_U13.INM1)     .6835  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)     .6300
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)     .6300               
+
+
+  These voltages failed to converge:
+
+    V(N16649708)              =     15.86V  \    28.60KV
+    V(N16649476)              =     3.895V  \  -528.20KV
+    V(OUT)                    =     3.901V  \  -528.20KV
+    V(N16649734)              =     3.907V  \  -527.79KV
+    V(X_U5.Top_Core_VGP)      =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_N00764)   =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_VIN_INT)  =   629.96mV  \   500.00mV
+    V(X_U5.Top_Core_N01082)   =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_VGN)      =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_N00816)   =     3.845V  \   -8.092KV
+    V(X_U5.Top_Core_N00962)   =   123.16mV  \   -10.56nV
+    V(X_U5.Top_Core_N00838)   =   793.70mV  \   629.96mV
+    V(X_U5.Top_N03999)        =   957.44mV  \   500.00mV
+    V(X_U5.Top_N02966)        =     1.000V  \   793.70mV
+    V(X_U5.Top_N03064)        =     1.000V  \   793.70mV
+    V(X_U4.drain)             =     15.86V  \    29.33KV
+    V(X_U4.source)            =   -2.321pV  \    1.701KV
+    V(X_U4.gate)              =     3.901V  \  -690.13KV
+    V(X_U4.tl_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.bl_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.br_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.tr_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.tl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_gd)             =     15.86V  \    29.33KV
+    V(X_U4.br_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_gd)             =     15.86V  \    29.33KV
+    V(X_U4.tl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.bl_sd)             =     15.86V  \    29.33KV
+    V(X_U4.br_sd)             =     15.86V  \    29.33KV
+    V(X_U4.tr_sd)             =     15.86V  \    29.33KV
+    V(X_U5.X_Top_U13.INP2)    =   714.33mV  \   566.97mV
+    V(X_U5.X_Top_U13.1)       =     1.000V  \   793.70mV
+    V(X_U5.Top_N02948)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.Ypp) =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.OUTf) =   793.70mV  \   629.96mV
+    V(X_U5.X_Top_U18.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.Top_N02960)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U20.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U19.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.XNSW1.test) =     1.000V  \   629.96mV
+    V(X_U5.X_Top_Core_U12.XPSW1.test) =  -206.30mV  \         0V
+    V(X_U5.X_Top_Core_U12.XPSW2.test) =   793.70mV  \   629.96mV
+
+  These supply currents failed to converge:
+
+    I(V_V15)                  =    -6.158A  \  -404.82KA
+    I(V_V16)                  =   -15.86mA  \    28.44KA
+
+  These devices failed to converge:
+    X_U5.E_Top_ABM1 X_U4.gswitch X_U4.ggsdiode X_U5.M_Top_Core_M4 
+    X_U5.M_Top_Core_M3 
+Resuming Simulation with the following settings
+RELTOL = 0.05
+
+Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-528.2E+03  (  VDD)    3.9685  (N16649476)-528.2E+03                     
+
+(N16649618)    3.9685                 (N16649704)   15.8740                     
+
+(N16649708) 28.59E+03                 (N16649734)-527.8E+03                     
+
+(X_U4.gate)-690.1E+03                 (X_U4.bl_gd) 29.32E+03                    
+
+(X_U4.bl_gs) 1700.8000                (X_U4.bl_sd) 29.32E+03                    
+
+(X_U4.br_gd) 29.32E+03                (X_U4.br_gs) 1700.8000                    
+
+(X_U4.br_sd) 29.32E+03                (X_U4.drain) 29.32E+03                    
+
+(X_U4.tl_gd) 29.32E+03                (X_U4.tl_gs) 1700.8000                    
+
+(X_U4.tl_sd) 29.32E+03                (X_U4.tr_gd) 29.32E+03                    
+
+(X_U4.tr_gs) 1700.8000                (X_U4.tr_sd) 29.32E+03                    
+
+(X_U4.source) 1700.8000               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)     .7937           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)     .7937           (X_U5.Top_N02966)     .7937               
+
+(X_U5.Top_N03064)     .7937           (X_U5.Top_N03999)     .5000               
+
+(X_U5.X_Top_U13.1)     .7937          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)-528.2E+03         (X_U5.Top_Core_VGP)-527.8E+03             
+
+(X_U5.Top_N16652210)    1.7461        (X_U5.Top_N16652216)     .7143            
+
+(X_U5.Top_N16652601)    1.7461        (X_U5.Top_N16652637)     .7143            
+
+(X_U5.X_Top_U13.INM1)   -1.7639       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)     .5670       (X_U5.X_Top_U14.INM1)    1.3859           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)     .7937       (X_U5.X_Top_U19.YINT)     .7937           
+
+(X_U5.X_Top_U20.YINT)     .7937       (X_U5.Top_Core_N00764)-527.8E+03          
+
+(X_U5.Top_Core_N00816)-8092.5000      (X_U5.Top_Core_N00838)     .6300          
+
+(X_U5.Top_Core_N00962)-10.56E-09      (X_U5.Top_Core_N01082)-528.2E+03          
+
+(X_U5.Top_Core_VIN_INT)     .5000     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    0.0000    (X_U5.Top_UVLO_N16641955)     .0675       
+
+(X_U5.Top_UVLO_N16641969)    3.1073   (X_U5.X_Top_Core_U12.Ypp)     .7937       
+
+(X_U5.X_Top_Core_U12.OUTf)     .6300  (X_U5.X_Top_Core_U12.OUTp) 2.291E-09      
+
+(X_U5.X_Top_Core_U12.OUTr)     .7937  (X_U5.X_Top_Core_U12.VSUP)     .7937      
+
+(X_U5.X_Top_UVLO_U13.INM1)     .6835  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)     .6300
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    0.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)     .6300               
+
+
+  These voltages failed to converge:
+
+    V(N16649708)              =     15.86V  \    28.59KV
+    V(N16649476)              =     3.895V  \  -528.20KV
+    V(OUT)                    =     3.901V  \  -528.20KV
+    V(N16649734)              =     3.907V  \  -527.79KV
+    V(X_U5.Top_Core_VGP)      =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_N00764)   =     8.907V  \  -527.79KV
+    V(X_U5.Top_Core_VIN_INT)  =   629.96mV  \   500.00mV
+    V(X_U5.Top_Core_N01082)   =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_VGN)      =     8.895V  \  -528.19KV
+    V(X_U5.Top_Core_N00816)   =     3.845V  \   -8.092KV
+    V(X_U5.Top_Core_N00962)   =   123.16mV  \   -10.56nV
+    V(X_U5.Top_Core_N00838)   =   793.70mV  \   629.96mV
+    V(X_U5.Top_N03999)        =   957.44mV  \   500.00mV
+    V(X_U5.Top_N02966)        =     1.000V  \   793.70mV
+    V(X_U5.Top_N03064)        =     1.000V  \   793.70mV
+    V(X_U4.drain)             =     15.86V  \    29.32KV
+    V(X_U4.source)            =   -2.321pV  \    1.701KV
+    V(X_U4.gate)              =     3.901V  \  -690.13KV
+    V(X_U4.tl_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.bl_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.br_gs)             =   -2.321pV  \    1.701KV
+    V(X_U4.tr_gs)             =   779.50pV  \    1.701KV
+    V(X_U4.tl_gd)             =     15.86V  \    29.32KV
+    V(X_U4.bl_gd)             =     15.86V  \    29.32KV
+    V(X_U4.br_gd)             =     15.86V  \    29.32KV
+    V(X_U4.tr_gd)             =     15.86V  \    29.32KV
+    V(X_U4.tl_sd)             =     15.86V  \    29.32KV
+    V(X_U4.bl_sd)             =     15.86V  \    29.32KV
+    V(X_U4.br_sd)             =     15.86V  \    29.32KV
+    V(X_U4.tr_sd)             =     15.86V  \    29.32KV
+    V(X_U5.X_Top_U13.INP2)    =   714.33mV  \   566.97mV
+    V(X_U5.X_Top_U13.1)       =     1.000V  \   793.70mV
+    V(X_U5.Top_N02948)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.Ypp) =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.OUTf) =   793.70mV  \   629.96mV
+    V(X_U5.X_Top_U18.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.Top_N02960)        =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U20.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_U19.YINT)    =     1.000V  \   793.70mV
+    V(X_U5.X_Top_Core_U12.XNSW1.test) =     1.000V  \   629.96mV
+    V(X_U5.X_Top_Core_U12.XPSW1.test) =  -206.30mV  \         0V
+    V(X_U5.X_Top_Core_U12.XPSW2.test) =   793.70mV  \   629.96mV
+
+  These supply currents failed to converge:
+
+    I(V_V15)                  =    -6.158A  \  -404.82KA
+    I(V_V16)                  =   -15.86mA  \    28.43KA
+
+  These devices failed to converge:
+    X_U4.gswitch X_U4.ggsdiode X_U5.M_Top_Core_M4 X_U5.M_Top_Core_M3 
+Convergence problem in transient analysis at Time =  2.500E-06
+         Time step =  95.37E-18, minimum allowable step size =  100.0E-18
+
+  These voltages failed to converge:
+
+    V(N16649476)              =    6.093mV  \    7.928mV
+    V(OUT)                    =    6.109mV  \    8.037mV
+    V(N16649734)              =    6.112mV  \    7.948mV
+    V(X_U5.Top_Core_N00962)   =   336.73uV  \    2.180mV
+    V(X_U4.source)            =   236.00uV  \    2.211mV
+    V(X_U4.gate)              =    11.85mV  \    87.51mV
+    V(X_U4.tl_gs)             =   194.44uV  \   -1.893mV
+    V(X_U4.bl_gs)             =   194.44uV  \   -1.893mV
+    V(X_U4.br_gs)             =   194.44uV  \   -1.893mV
+    V(X_U4.tr_gs)             =   194.44uV  \   -1.893mV
+    V(X_U4.tl_gd)             =     16.46V  \    -17.09V
+    V(X_U4.bl_gd)             =     16.46V  \    -17.09V
+    V(X_U4.br_gd)             =     16.46V  \    -17.09V
+    V(X_U4.tr_gd)             =     16.46V  \    -17.09V
+    V(X_U4.tl_sd)             =     16.46V  \    -17.09V
+    V(X_U4.bl_sd)             =     16.46V  \    -17.09V
+    V(X_U4.br_sd)             =     16.46V  \    -17.09V
+    V(X_U4.tr_sd)             =     16.46V  \    -17.09V
+
+  These supply currents failed to converge:
+
+    I(X_U5.E_Top_Core_E3)     =  -277.72uA  \  -277.34uA
+    I(X_U5.E_Top_Core_E4)     =   259.39uA  \   259.00uA
+    I(X_U4.E_IGS)             =   -21.49nA  \  -169.18nA
+    I(X_U4.E_IGD)             =   640.28pA  \   -2.648nA
+    I(X_U4.E_ISD)             =   -4.424nA  \   -50.50nA
+    I(V_V15)                  =   -2.520mA  \    89.65mA
+    I(X_U4.V_INGS)            =    21.49nA  \   169.14nA
+    I(X_U4.V_INGD)            =   -35.83nA  \  -367.81nA
+    I(X_U4.V_INSD)            =   -30.73nA  \  -320.03nA
+
+  These devices failed to converge:
+    X_U4.gswitch X_U4.ggsdiode 
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)     .0061  (  VDD)    5.0000  (N16649476)     .0061                     
+
+(N16649618)    1.1566                 (N16649704)   20.0000                     
+
+(N16649708)   19.9800                 (N16649734)     .0061                     
+
+(X_U4.gate)     .0118                 (X_U4.bl_gd)   16.4610                    
+
+(X_U4.bl_gs) 194.4E-06                (X_U4.bl_sd)   16.4610                    
+
+(X_U4.br_gd)   16.4610                (X_U4.br_gs) 194.4E-06                    
+
+(X_U4.br_sd)   16.4610                (X_U4.drain)   19.9780                    
+
+(X_U4.tl_gd)   16.4610                (X_U4.tl_gs) 194.4E-06                    
+
+(X_U4.tl_sd)   16.4610                (X_U4.tr_gd)   16.4610                    
+
+(X_U4.tr_gs) 194.4E-06                (X_U4.tr_sd)   16.4610                    
+
+(X_U4.source) 236.0E-06               (X_U5.Top_N02910)    0.0000               
+
+(X_U5.Top_N02948)    0.0000           (X_U5.Top_N02952)    0.0000               
+
+(X_U5.Top_N02960)    1.0000           (X_U5.Top_N02966)    1.0000               
+
+(X_U5.Top_N03064)    0.0000           (X_U5.Top_N03999)    0.0000               
+
+(X_U5.X_Top_U13.1) 164.8E-15          (X_U5.X_Top_U14.1)    0.0000              
+
+(X_U5.Top_Core_VGN)   -4.9965         (X_U5.Top_Core_VGP)   -4.9967             
+
+(X_U5.Top_N16652210)    2.2000        (X_U5.Top_N16652216)     .9000            
+
+(X_U5.Top_N16652601)    2.2000        (X_U5.Top_N16652637)     .9000            
+
+(X_U5.X_Top_U13.INM1)    1.0434       (X_U5.X_Top_U13.INP1)    0.0000           
+
+(X_U5.X_Top_U13.INP2)    0.0000       (X_U5.X_Top_U14.INM1)    2.2000           
+
+(X_U5.X_Top_U14.INP1)    0.0000       (X_U5.X_Top_U14.INP2)    0.0000           
+
+(X_U5.X_Top_U18.YINT)    1.0000       (X_U5.X_Top_U19.YINT)    1.0000           
+
+(X_U5.X_Top_U20.YINT)    0.0000       (X_U5.Top_Core_N00764)   -4.9939          
+
+(X_U5.Top_Core_N00816)    5.0000      (X_U5.Top_Core_N00838) 434.8E-12          
+
+(X_U5.Top_Core_N00962) 336.7E-06      (X_U5.Top_Core_N01082)   -4.9939          
+
+(X_U5.Top_Core_VIN_INT) 434.8E-12     (X_U5.X_Top_UVLO_U13.1)    0.0000         
+
+(X_U5.X_Top_Core_U12.Yp)    1.0000    (X_U5.Top_UVLO_N16641955)     .0850       
+
+(X_U5.Top_UVLO_N16641969)    3.9150   (X_U5.X_Top_Core_U12.Ypp)    0.0000       
+
+(X_U5.X_Top_Core_U12.OUTf) 434.8E-12  (X_U5.X_Top_Core_U12.OUTp)    1.0000      
+
+(X_U5.X_Top_Core_U12.OUTr) 434.8E-12  (X_U5.X_Top_Core_U12.VSUP)    1.0000      
+
+(X_U5.X_Top_UVLO_U13.INM1)    1.0850  (X_U5.X_Top_UVLO_U13.INP1)    0.0000      
+
+(X_U5.X_Top_UVLO_U13.INP2)    0.0000  (X_U5.X_Top_Core_U12.XNSW1.test)    0.0000
+
+(X_U5.X_Top_Core_U12.XNSW2.test)    1.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW1.test)    1.0000                                      
+
+(X_U5.X_Top_Core_U12.XPSW2.test)    0.0000               
+
+Resuming Simulation with the following settings
+ITL4 = 585
+ABSTOL = 5.62e-010
+
+
+
+          JOB CONCLUDED
+ AutoConverge Simulator Options
+ ITL1 = 1000
+ ITL2 = 1000
+ ITL4 = 585
+ RELTOL = 0.001
+ ABSTOL = 5.62341e-010
+ VNTOL = 1e-005
+ PIVTOL = 1e-013
+
+**** 02/16/17 09:12:11 ******* PSpice 16.2.0 (Oct 2008) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TR"  [ C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020-ps
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       49.70
+

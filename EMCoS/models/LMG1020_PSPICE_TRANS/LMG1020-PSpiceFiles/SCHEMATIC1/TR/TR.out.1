@@ -1,0 +1,63 @@
+
+**** 02/16/17 08:57:51 ******* PSpice 16.2.0 (Oct 2008) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TR"  [ C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020-ps
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TR.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100us 0 
+.OPTIONS STEPGMIN
+.OPTIONS PREORDER
+.OPTIONS ABSTOL= 10.0p
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 400
+.OPTIONS VNTOL= 10.0u
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE V(alias(*)) I(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LMG1020
+C_C11         0 VDD  1u  
+X_U3         N16649708 N16649704 D_D1
+R_R19         N16649704 N16649708  4.02  
+X_U5         VDD 0 N16649618 N16649734 N16649476 0 LMG1020
+R_R20         N16649704 N16649708  4.02  
+V_V15         VDD 0 5
+V_V2         N16649618 0  
++PULSE 5 0 2u 1n 1n 0.499u 1u
+V_V16         N16649704 0 20
+R_R17         N16649704 N16649708  4.02  
+R_R18         N16649704 N16649708  4.02  
+C_C12         0 N16649708  4700p  
+R_Routl         N16649476 OUT  1m  
+X_U4         OUT N16649708 0 EPC2019 
+R_R21         N16649708 0  1k  
+R_Routh         N16649734 OUT  1m  
+
+**** RESUMING TR.cir ****
+.END
+
+ERROR -- Subcircuit D_D1 used by X_U3 is undefined
+ERROR -- Subcircuit LMG1020 used by X_U5 is undefined
+ERROR -- Subcircuit EPC2019 used by X_U4 is undefined

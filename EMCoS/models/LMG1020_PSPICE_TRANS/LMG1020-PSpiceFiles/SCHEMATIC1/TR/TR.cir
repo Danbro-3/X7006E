@@ -1,0 +1,28 @@
+** Profile: "SCHEMATIC1-TR"  [ C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020-pspicefiles\schematic1\tr.sim ] 
+
+** Creating circuit file "TR.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lmg1020.lib" 
+.LIB "../../../epc2019.lib" 
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100us 0 
+.OPTIONS STEPGMIN
+.OPTIONS PREORDER
+.OPTIONS ABSTOL= 10.0p
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 400
+.OPTIONS VNTOL= 10.0u
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE V(alias(*)) I(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

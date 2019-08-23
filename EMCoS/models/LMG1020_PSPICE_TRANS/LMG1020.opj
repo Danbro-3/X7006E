@@ -1,0 +1,79 @@
+(ExpressProject "LMG1020"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\xlmg1020yff_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\lmg1020.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lmg1020-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\lmg1020-pspicefiles\schematic1\tr.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lmg1020-pspicefiles\schematic1\tr.sim"
+        (DisplayName "SCHEMATIC1-TR")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (XLMG1020YFF_TRANS
+      (FullPartName "XLMG1020YFF_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\LMG1020\RELEASE_TI\PSPICE\LMG1020_PSPICE_TRANS\XLMG1020YFF_TRANS.OLB")
+      (DeviceIndex "0"))
+    (LMG1020
+      (FullPartName "LMG1020.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\LMG1020\RELEASE_TI\PSPICE\LMG1020_PSPICE_TRANS\LMG1020.OLB")
+      (DeviceIndex "0"))
+    (EPC2019
+      (FullPartName "EPC2019.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\LMG1020\RELEASE_TI\PSPICE\LMG1020_PSPICE_TRANS\EPC2019.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020.dsn")
+      (Path "Design Resources"
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\LMG1020\Release_TI\PSPICE\LMG1020_PSPICE_TRANS\lmg1020.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 0 797 -8 -30 0 200 0 530"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1586 25 611")
+        (Scroll "-271 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\LMG1020\RELEASE_TI\PSPICE\LMG1020_PSPICE_TRANS\LMG1020.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "a0199733"))
